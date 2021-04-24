@@ -411,7 +411,7 @@ static OggOpusEnc *ope_encoder_create_callbacks_impl(const OpusEncCallbacks *cal
   enc->comment_padding = 512;
   enc->header.channels=channels;
   enc->header.channel_mapping=family;
-  enc->header.input_sample_rate=rate;
+  enc->header.input_sample_rate=48000;
   enc->header.gain=0;
   if (family != -1) {
     ret=opeint_encoder_surround_init(&enc->st, 48000, channels,
